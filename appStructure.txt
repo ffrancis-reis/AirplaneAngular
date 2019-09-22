@@ -11,3 +11,25 @@ src
                     airplane.model.ts
         app.module.ts
     index.html
+
+==============================================================
+
+npm commands
+
+npm install -g @angular/cli
+
+ng new AirplaneAngular
+
+ng serve --o
+
+ng g c airplanes --spec=false --s
+ng g c airplanes/airplane --spec=false --s
+ng g c airplanes/airplane-list --spec=false --s
+ng g s shared/airplane --spec=false
+ng g cl shared/airplane --type=model --spec=false
+
+
+npm install ngx-toastr --save
+npm i guid-typescript --save
+
+==============================================================
