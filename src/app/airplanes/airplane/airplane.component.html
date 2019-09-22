@@ -1,0 +1,31 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <!-- <input type="hidden" name="Id" [value]="service.formData.Id"> -->
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-plane" [class.green-icon]="Model.valid"
+                        [class.red-icon]="Model.invalid && Model.touched"></i>
+                </div>
+            </div>
+            <input placeholder="modelo" class="form-control" name="Model" #Model="ngModel"
+                [(ngModel)]="service.formData.Model" required maxlength="100" minlength="5">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-users" [class.green-icon]="PassengersNumber.valid"
+                        [class.red-icon]="PassengersNumber.invalid && PassengersNumber.touched"></i>
+                </div>
+            </div>
+            <input type="number" placeholder="número de passageiros" class="form-control" name="PassengersNumber"
+                #PassengersNumber="ngModel" [(ngModel)]="service.formData.PassengersNumber" required min="2" max="80">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-success btn-lg btn-block" [disabled]="form.invalid"><i
+                class="fas fa-database"></i> Enviar</button>
+    </div>
+</form>

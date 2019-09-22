@@ -1,0 +1,9 @@
+<table class="table table-hover">
+    <tr *ngFor="let plane of service.list">
+        <td (click)="populateForm(plane)">{{plane.Model}}</td>
+        <td (click)="populateForm(plane)">{{plane.PassengersNumber}}</td>
+        <td>
+            <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(plane.Id)"></i>
+        </td>
+    </tr>
+</table>

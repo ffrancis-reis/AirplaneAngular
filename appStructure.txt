@@ -1,0 +1,13 @@
+src
+    app
+        airplanes
+            airplanes.component.ts|.html|.css
+                airplane
+                    airplane.component.ts|.html|.css
+                airplane-list
+                    airplane-list.ts|.html|.css
+                shared
+                    airplane.service.ts
+                    airplane.model.ts
+        app.module.ts
+    index.html
