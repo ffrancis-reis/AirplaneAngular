@@ -20,8 +20,8 @@ export class AirplaneListComponent implements OnInit {
     this.service.formData = Object.assign({}, plane);
   }
 
-  onDelete(id) {
-    if (confirm('Você deseja realmente excluir o modelo?')) {
+  onDelete(id: string) {
+    if (confirm('Você deseja excluir o modelo?')) {
       this.service.deleteAirplane(id).subscribe(
         res => {
           this.service.refreshList();

@@ -7,7 +7,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class AirplaneService {
   formData: Airplane;
-  readonly rootUrl = 'https://localhost:44326/api'
+  readonly rootUrl = 'https://localhost:44326/api';
   list: Airplane[];
 
   constructor(private http: HttpClient) { }
