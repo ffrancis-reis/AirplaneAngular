@@ -8,4 +8,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## CRUD testing
 
-The [backend web api](https://github.com/ffrancis-reis/Airplane) has to be running on `https://localhost:44326`. Otherwise it is necessary to change the url in `app/shared/airplane.service.ts`.
+The [backend web api](https://github.com/ffrancis-reis/Airplane) has to be running on `https://localhost:5001`. Otherwise it is necessary to change the url in `app/shared/airplane.service.ts`.
