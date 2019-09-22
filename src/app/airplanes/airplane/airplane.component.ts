@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AirplaneService } from 'src/app/shared/airplane.service';
 import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { Guid } from "guid-typescript";
 
 @Component({
   selector: 'app-airplane',
@@ -35,6 +36,8 @@ export class AirplaneComponent implements OnInit {
   }
 
   insertRecord(form: NgForm) {
+    this.service.formData.Id = Guid.create().toString(); // ==> b77d409a-10cd-4a47-8e94-b0cd0ab50aa1
+    this.service.formData.CreatedOn = new Date();
     this.service.postAirplane().subscribe(
       res => {
         this.resetForm(form);
